@@ -1,0 +1,7 @@
+{
+    "imports": {
+        "harmony": "https://deno.land/x/harmony@v2.7.0/mod.ts",
+        "import-all": "https://deno.land/x/importall@v1.1.1/mod.ts",
+        "lala": "https://deno.land/x/lala@v3.1.5/mod.ts"
+    }
+}
