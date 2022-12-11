@@ -1,4 +1,4 @@
-import type { Interaction } from "harmony";
+import type { ApplicationCommandInteraction } from "harmony";
 
 export interface CommandInfo {
   name: string;
@@ -12,7 +12,7 @@ export class Command implements CommandInfo {
     this.name = data.name;
     this.description = data.description;
   }
-  execute(_i: Interaction): Promise<void | null> {
+  execute(_i: ApplicationCommandInteraction): Promise<unknown> {
     return Promise.resolve(null);
   }
 }

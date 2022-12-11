@@ -1,4 +1,4 @@
-import { Interaction, InteractionResponseType } from "harmony";
+import { ApplicationCommandInteraction, InteractionResponseType } from "harmony";
 import { Command } from "../util/command.ts";
 
 export default class PingCommand extends Command {
@@ -8,7 +8,7 @@ export default class PingCommand extends Command {
       description: "Get La Lala's ping to the Discord server.",
     });
   }
-  async execute(i: Interaction): Promise<void | null> {
+  async execute(i: ApplicationCommandInteraction): Promise<unknown> {
     await i.respond({
       type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
       content: "Pinging",
@@ -18,5 +18,6 @@ export default class PingCommand extends Command {
         (Date.now()) - (i.timestamp.getTime())
       }ms\`.`,
     );
+    return;
   }
 }
